@@ -12,3 +12,7 @@ HTTP是不保存状态的协议， 在HTTP 1.1引入cookie管理状态
 - HTTP/1.1全是持久连接 1.0却并未标准化
 - 持久化连接使得管线化并行请求成为现实
 - 服务器端发送响应报文内的一个叫Set-Cookie的首部字段信息， 通知客户端保存cookie，当下次客户端在此往该服务端发送请求时， 客户端会自动在请求报文中加入cookie值后发送出去
+# cookie, localstorage, sessionStorage的区别
+- cookie是用来做状态存储， 因为HTTP协议是无状态协议， 但是cookie体积上限只有4kb， 性能缺陷， 请求携带了很多不必要的内容。 安全缺陷。cookie可以直接通过eval获取
+- localStorage也会在同一域名下存储相同的一段localStorage但是容量上限为5M，而且只针对一个域名，所以是持久存储， 只存在客户端， 默认不参与服务端的通信， 避免了性能问题和安全问题， 并且操作非常方便
+- sessionStorage容量上限也是5M，也是只存在客户端， 默认不参与服务端的通信， 接口封装， 但是sessionStorage是会话级别的存储， 并不是持久化存储， 页面关闭， 这部分sessionStorage就不复存在了
