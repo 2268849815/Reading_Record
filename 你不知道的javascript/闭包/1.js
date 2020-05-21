@@ -20,6 +20,6 @@ function f1() {
   var a = 2;
   function f2() {
     var a = 3
-    console.log(3)
+    console.log(a) // 3 var可以被改变
   }
-}
+}s
