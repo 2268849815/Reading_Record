@@ -23,3 +23,4 @@ function f1() {
     console.log(a) // 3 var可以被改变
   }
 }s
+
